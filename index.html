@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--Mora da go ima za da se razbere deka e html dokument-->
+<html lang="en">
+  <!--pocnuvame so html-->
+  <head>
+    <!--web stranite imaat dva dela: head i body, head e ona sto se prikazuva na tabot, a body e samata web strana-->
+    <meta charset="UTF-8">
+    <meta name="author" content="Nikola Janev">
+    <meta name="description" content="Ova e mojata prva strana">
+    <title>Mojata prva strana</title>
+    <!--title tag e za imeto na stranata koja se pokazuva vo tabot-->
+    <link rel="icon" href="html5.png" type="image/x-icon">
+    <!--dodavame rel so znace relacija vo ovoj slucaj icon
+        html ref (href) koj sto vodi do icon, i tipot e slika-->
+    <!--ova e relativna referenca, t.e linkuvame sliki (sodrzina sto e vo nasiot folder)-->
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <!--so link dodavame relacija stylesheet
+        i html referencirame kon main.css i tipot e text/css-->
+  </head>
+
+  <body>
+    <header>
+      <!--Header ili na makedonski naslov znaci deka ova e naslov na stranata i vo ovaa sekcija sodrzi
+    informacii povrzani so naslovot, i moze da ima povekje header tagovi-->
+      <h1>Zdravo, ova e heading 1</h1>
+      <!--h znaci heading kako vo WORD, h1 e najgolemo, h2, h3-->
+      <nav aria-label="primary-navigation">
+        <!--nav znaci navigation area ili prostor za navigacija
+            i navigaciski area moze da imame povekje vo web sajtot, i zatoa mozeme da gi oznacime so aria-label
+        na primer ovaa navigaciska area e primarna navigacija-->
+        <ul>
+          <!--unordered list t.e *eden-->
+          <!--*dva-->
+          <li>
+            <a href="#heading1">Odi na heading 2</a>
+          </li>
+          <!--pravejki podtocki-->
+          <li>
+            <a href="#heading2">Odi na heading 2</a>
+          </li>
+          <li>
+            <a href="#contact">Contact me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr>
+    <!--so <hr> tag bez zatvaranje printame prava linija-->
+    <main>
+      <!--main sekcijata go oznacuva glavniot del na primer vo skolski esej sto e glavniot del-->
+      <section id="heading1">
+        <!--section zaedno so id znaci na koj del ke se odi koga ke se klikne-->
+        <h2>Ova e heading 2</h2>
+        <p>
+          Ova e paragraf <br>test&nbsp;&nbsp;&nbsp;&nbsp;i ova ke odi vo nov
+          red
+        </p>
+        <!--So <br> tag bez zatvaranje
+        printame nov red-->
+        <img src="img/html_logo_300x300.png"
+          alt="HTML 5 slika"
+          title="klikni tuka da odis na html sajtot"
+          width="200"
+          height="200"
+          >
+        <!--src e source na slikata(pateka), a alt
+        e ona so se prikazuva dokolku ne se loadira slikata vo nekoj sucaj, title e ona so se pojavuva 
+    koga glusecot ke ode nad slikata. width i height se postavuva za da mu kaze na browserot koja e goleminata na slikata-->
+
+        <p>Nov red, da da</p>
+        <p>Zdravo</p>
+        <p>Nov red, da da</p>
+        <p>Nov red, da da</p>
+      </section>
+      <section id="heading2">
+        <h2>Zdravo, ova e head&nbsp;ing 2</h2>
+        <!--&nbsp; ova oznacuva prazno mesto-->
+        <hr>
+        <p>
+          Ova e paragraf, pod heading 2 <br>Jas sum&nbsp;<abbr
+            title="NIKOLA JANEV"
+            >Nikola</abbr
+          >
+          <!--abbr e tekst koj se 
+            prikazuva koga ke go doblizis gluvceto do zvoborot posle tittle, vo ovoj slucaj Nikola-->
+        </p>
+
+        <figure>
+          <!--a figure elementot kazuva deka ova e figura-->
+          <img
+            src="img/caribbean.jpg"
+            alt="Slika od karibite"
+            width="200"
+            height="200"
+            loading="lazy"
+          >
+          <!--loading atributot moze da bide eager ili lazy, eager e setirano na default i gi vcituva site sliki koga ke odis na web sajtot
+        no lazy gi vcituva slikite koga se potrebni, primer ako slikata e dolu na sajtot, a nie sme gore, nema da ja vcita
+    i toa gi zgolemuva performansite
+Primer ako stranata ima 100 sliki primer, so loading lazy ke se zabrzat performansite, t.e nema da se ceka sajtot da gi loadne site sliki naednas-->
+
+          <figcaption>Slika od karibite (pod slikata)</figcaption>
+          <!--figcaption e povrzana so slikata, i e naslov koj stoe pod ili nad slikata-->
+        </figure>
+        <p>
+          Klikni tuka za da odis na&nbsp;<a href="https://www.google.com/"
+            >Google.com</a
+          >
+        </p>
+        <!--<a> e anchor tag, koj moze da referencirame kon drugi web strani od internet t.e apsolutna referenca-->
+
+        <p>Jas sum od&nbsp;<abbr title="Negotino">NG</abbr></p>
+        <figure>
+          <figcaption>Slika od plaza (nad slikata)</figcaption>
+          <img
+            src="img/vacation.jpg"
+            alt="Vacation logo"
+            width="400"
+            height="200"
+            loading="lazy"
+          >
+        </figure>
+      </section>
+      <br><!--nova linija-->
+
+      <table>
+        <!--tabela-->
+        <caption>
+          My daily schedule
+        </caption>
+        <thead>
+          <!--isto kako i head, glaven del i footer za web stranata imame i za tabelata-->
+          <tr>
+            <!--table row ili redica-->
+            <th>Time</th>
+            <!--table heading-->
+            <th>Activities</th>
+            <!--table heading-->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!--table row, -->
+            <td>
+              <!--table data-->
+              <time datetime="08:00">8am</time>-<time datetime="11:00"
+                >11am</time
+              >
+            </td>
+            <td>Write code</td>
+          </tr>
+          <tr>
+            <!--table row, -->
+            <td>
+              <!--table data-->
+              <time datetime="11:00">11am</time>-<time datetime="12:00"
+                >12pm</time
+              >
+            </td>
+            <td>Eat lunch</td>
+          </tr>
+          <tr>
+            <td rowspan="2">All other times</td>
+            <td>Free time</td>
+          </tr>
+
+          <tr>
+            <td>Sleep</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">
+              And thats what i do everyday
+              <br>
+              test
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+      <hr>
+      <section id="contact">
+        <h2>Contact info</h2>
+
+        <form action="https://httpbin.org/get" method="get"><!--form action e domain ili ip adresa na serverot koj ke pravi 
+        get i post na inputot-->
+          <fieldset><!--fieldset e kako tabelice okolu input-->
+            <legend>Personal info</legend><!--naslov koj ke stoe vo tabelata-->
+<p>
+          <label for="firstName">First name:</label><!--prvo pravime label-->
+          <input type="text" name="firstName" id="firstName" placeholder="Input your first name" autocomplete="on" required>
+        </p><!--posle pravime input, inputot ke bide text, autocomplete e da go zapamtuva vneseniot zbor nareden pat koga
+        ke se pristapi na web stranata, required e zadolzitelno deka treba da se popolni-->
+
+          <p>
+          <label for="lastName">Last name:</label>
+          <input type="text" name="lastName" id="lastName" placeholder="Input your last name" autocomplete="on" required>
+        </p>
+
+        <p>
+          <label for="password">Password:</label><!--input za password, placeholder e tekstot koj se prikazuva vo
+          pravoagolniceto, i required e deka mora da se vnese password -->
+          <input type="password" name="password" id="password" placeholder="Input your password" required>
+        </p>
+
+        <p>
+          <label for="phoneNumber">Phone number:</label>
+          <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Input your phone number" autocomplete="on" required>
+        </p><!--input za telefonski broj-->
+
+        <p>
+          <label for="godina">Koga ste rodeni:</label>
+          <input type="number" name="godina" id="godina" placeholder="Input your godina" autocomplete="on" required min="1950" max="2022" step="10" value="1970">
+        </p><!--input za godina na primer ili nekoj broj, min e minimalniot broj koj moze da se vnese, step e skokanjeto koga se stiska na strelkite, max e maksimalniot broj
+        value e default brojot koj ke se prikazuva-->
+
+         <p>
+          <label for="coffe">Favorite coffe: </label>
+          <select name="coffe" id="coffe" multiple size="8"><!--multiple size kazuva kolku da se display
+          -->
+            <optgroup label="Coffes"><!--optgroup label zabolduva kategorija-->
+            <option value="regular coffe">Regular coffe</option><!--option value e opcija na primer
+            vo ovoj slucaj za coffes-->
+            <option value="mochachino">Mochachino</option>
+          </optgroup>
+          <optgroup label="tea"><!--optgroup label zabolduva kategorija vo ovoj slucaj caj -->
+            <option value="turski caj">Turski caj</option>
+            <option value="planinski caj" selected>Planinski caj</option>
+          </optgroup>
+          <option value="drugo">Drug pijalok</option>
+          </select>
+        </p> 
+
+<!-- <p>
+<label for="coffe">Favorite coffe:</label>
+<input type="text" name="coffe" id="coffe" list="coffe-list">
+<datalist id="coffe-list">
+  <option value="coffe">
+  <option value="latte"> 
+  <option value="espresso">
+    <option value="turski caj">
+      <option value="test">  
+</datalist>
+</p> -->
+</fieldset>
+<br>
+<fieldset>
+<legend>What is your favorite food? (Choose only one)</legend><!--nov fieldset t.e tabelice okolu inputot-->
+<p>
+<input type="radio" name="food" id="tacos" value="tacos"><!--for treba da se sovpagja so id sekogas-->
+<label for="tacos">Tacos</label>
+<!--input tipit e radio, t.e select only one option, name e grupa vo ovoj slucaj food, id=tacos i value=tacos-->
+</p>
+
+<p>
+  <input type="radio" name="food" id="pizza" value="pizza"><!--for treba da se sovpagja so id sekogas-->
+  <label for="pizza">Pizza</label>
+  
+  </p>
+
+  <p>
+    <input type="radio" name="food" id="sandwich" value="sandwich"><!--for treba da se sovpagja so id sekogas-->
+    <label for="sandwich">Sandwich</label>
+    
+    </p>
+</fieldset>
+
+<fieldset>
+<legend>Do you have pets? (Select one or more)</legend>
+<p>
+  <input type="checkbox" name="pets" id="dog" value="dog">
+  <label for="dog">Dog</label>
+</p>
+<!--input so multiple choise, kade sto tipot e checkbox, name (grupata e pets), id i value se iminja na pets-->
+<p>
+  <input type="checkbox" name="pets" id="cat" value="cat">
+  <label for="cat">Cat</label>
+</p>
+
+<p>
+  <input type="checkbox" name="pets" id="fish" value="fish">
+  <label for="fish">Fish</label>
+</p>
+
+</fieldset>
+<br>
+<fieldset>
+<legend>Send me a note</legend>
+
+<p>
+<label for="message">Your message: </label>
+<br>
+<textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here"></textarea>
+</p>
+<!--input za textbox, kade sto moze da se isprati text, cols i rows, e sirocina i sirina, placeholder e tekstot
+koj se prikazuva vnatre vo textbox-->
+
+
+</fieldset>
+<br>
+<!-- 
+<input type="submit" value=""> -->
+<button type="submit">Submit (Get method)</button><!--imame submit button za get method, kade sto se submitnuva toa
+sto e vo polinjata-->
+<button type="reset">Reset</button><!--reset button za resetiranje na site vrednosti vo polinjata-->
+<button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post method</button>
+        </form>
+<!--button submit no za post, t.e za uploairanje t.e za dostavuvanje na informacii do serverot-->
+      </section>
+    </main>
+    <hr>
+    <footer>
+      <!-- so footer moze da imame povekje footeri, i oznacuva stapaloto ili krajot na web stranicata
+    -->
+      &lt;&lt;&copy;&nbsp;<a href="about.html">Nikola Janev</a>&gt;&gt;
+      <!--&lt e <, &copy e copyright mark, &gt e >-->
+      <hr>
+      <address>Timjanik, Negotino</address>
+      <!--Ova e tag za adresa-->
+    </footer>
+  </body>
+</html>
